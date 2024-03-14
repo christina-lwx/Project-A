@@ -462,6 +462,7 @@ function draw() {
 function arm(len, c, col, dir) {
   if (len > 1) {
     fill(col);
+    noStroke();
     ellipse(0, 0, 2 * len, 2 * len);
     //rotate(map(noise(c * 0.04, c2 * 0.04), 0, 1, PI / 180 * -25 * dir, PI / 180 * 35 * dir));
     rotate(
