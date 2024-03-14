@@ -9,11 +9,10 @@ var lenR = 40;
 var lenEye = 40;
 
 // let message =
-//  "In order to protect your personal safety, please remember some rules before entering this laboratory:\n1.Please don't look Thaumiel in the eye.\n2.Don't ask, do not ask who Thaumiel is.\n3.Mustn't call the deity by the name of him.\n4.Mustn't wake him up.";
-let message =
+  "In order to protect your personal safety, please remember some rules before entering this laboratory:\n1.Please don't look Thaumiel in the eye.\n2.Don't ask, do not ask who Thaumiel is.\n3.Mustn't call the deity by the name of him.\n4.Mustn't wake him up.";let message =
     "In order to protect your personal safety, please remember the rules before entering this laboratory:\n1.	You are 100% safe in the dark, when he is asleep or told “sleep”.\n2.	Do everything you can to resist tentacles taking over your spirit. \n3.	Wake up the Eye of Lylis, and use the up and down, left and right to control the Eye of Lylis to repel them.\n4.	The Eye of Lylis is the origin of evil.";
 let displayedLength = 0;
-let textSpeed = 1; // 控制文本显示的速度
+let textSpeed = 1; //
 function setup() {
   let canvas = createCanvas(800, 500);
   canvas.id("p5-canvas");
@@ -26,7 +25,7 @@ function setup() {
   lenR = width / 50;
   lenEye = width / 80;
   textAlign(CENTER, CENTER);
-  //frameRate(30); // 设置帧率
+  //frameRate(30); // 
 }
 function drawArm() {
   push();
@@ -235,7 +234,7 @@ function drawEyeArm() {
 }
 let state = 0;
 let state0Counter = 0;
-let inputText = ""; // 用于存储用户输入的文本
+let inputText = ""; 
 let eyeFade = 0;
 let offsetX = 0;
 let offsetY = 0;
@@ -247,7 +246,6 @@ function keyPressed() {
   maxOffsetY = width / 80;
   maxOffsetX = width / 80;
   if (key === " " && state == 1) {
-    // 检测空格键
     state = 2;
   } else if (keyCode === ENTER || keyCode === RETURN) {
     inputText=inputText.trim();
@@ -266,9 +264,8 @@ function keyPressed() {
       offsetSpeed = 5;
     }
     print(inputText);
-    inputText = ""; // 重置输入文本
+    inputText = ""; 
   }
-  // 允许用户使用删除键删除字符
   else if (keyCode === BACKSPACE && inputText.length > 0) {
     inputText = inputText.substring(0, inputText.length - 1);
   } else if (keyCode === UP_ARROW) {
@@ -295,7 +292,6 @@ function keyPressed() {
 }
 
 function keyTyped() {
-  // 除了控制键外，将用户的按键添加到输入字符串中
   if (keyCode !== ENTER && keyCode !== RETURN && keyCode !== BACKSPACE && key !== " ") {
     inputText += key;
   }
@@ -306,8 +302,6 @@ function draw() {
   if (state == 0) {
     textSize(20);
     fill(255);
-
-    // 每帧增加显示的字符数量
     textSpeed = 1;
     if (displayedLength < message.length) {
       displayedLength += textSpeed;
@@ -320,14 +314,13 @@ function draw() {
       }
     }
 
-    // 绘制文本，确保长文本能够被完整显示
     text(
       message.substring(0, displayedLength),
       0 / 2,
       0 / 2,
       width - 20,
       height - 20
-    ); // 留出边距
+    ); 
   } else if (state == 1) {
     colorMode(RGB);
     angleMode(DEGREES);
