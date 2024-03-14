@@ -9,7 +9,7 @@ var lenR = 40;
 var lenEye = 40;
 
 // let message =
-  "In order to protect your personal safety, please remember some rules before entering this laboratory:\n1.Please don't look Thaumiel in the eye.\n2.Don't ask, do not ask who Thaumiel is.\n3.Mustn't call the deity by the name of him.\n4.Mustn't wake him up.";
+//  "In order to protect your personal safety, please remember some rules before entering this laboratory:\n1.Please don't look Thaumiel in the eye.\n2.Don't ask, do not ask who Thaumiel is.\n3.Mustn't call the deity by the name of him.\n4.Mustn't wake him up.";
 let message =
     "In order to protect your personal safety, please remember the rules before entering this laboratory:\n1.	You are 100% safe in the dark, when he is asleep or told “sleep”.\n2.	Do everything you can to resist tentacles taking over your spirit. \n3.	Wake up the Eye of Lylis, and use the up and down, left and right to control the Eye of Lylis to repel them.\n4.	The Eye of Lylis is the origin of evil.";
 let displayedLength = 0;
